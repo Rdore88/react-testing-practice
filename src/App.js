@@ -11,6 +11,7 @@ class App extends Component {
         }
     }
     handleScore = (e) => {
+      console.log('EVENT', e.target.value);
         let scoreAction = parseInt(e.target.value, 0);
         this.setState({score: this.state.score + scoreAction});
     }
@@ -24,9 +25,9 @@ class App extends Component {
             <div className="App">
               <h1>Testing React Apps</h1>
               <div>
-                <button onClick={this.handleScore} className="btn btn-success btn-increment" value={1}>Increment Score</button>
+                <button onClick={this.handleScore} className="btn btn-success btn-increment" value='1'>Increment Score</button>
                 {' '}
-                <button onClick={this.handleScore} className="btn btn-danger btn-decrement" value={-1}>Decrement Score</button>
+                <button onClick={this.handleScore} className="btn btn-danger btn-decrement" value='-1'>Decrement Score</button>
               </div>
               <div>
                 <h3>Settle the Score:  </h3>
